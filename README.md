@@ -16,6 +16,12 @@ g++ main.cpp mcs_lock.cpp -lpthread -Ofast
 # Performance
 
 Benchmarking is done by incrementing a shared counter using `8 core Intel(R) Core(TM) i9-9900 CPU @ 3.10GHz with 32GB RAM`, 2 threads per core.
+
+```
+$ g++ --version
+g++ (Ubuntu 11.1.0-1ubuntu1~20.04) 11.1.0
+```
+
 `std::mutex` seems to win most of the time except for single threaded execution.
 
 ![1 Thread](results/lockwithT1.png)
